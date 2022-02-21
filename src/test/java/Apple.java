@@ -4,31 +4,26 @@ import lombok.Getter;
 @Builder
 public class Apple implements Items {
 
-    Double price;
-    int quantity;
-    String measurementUnit,itemName;
+    private Double price;
+    private int quantity;
+    private String measurementUnit,itemName="Apple";
 
     @Override
-    public Double getPrice(Double price) {
+    public Double getPrice() {
         this.price =price;
         return this.price;
     }
 
     @Override
-    public int getQuantity(int quantity) {
+    public int getQuantity() {
         this.quantity =quantity;
         return this.quantity;
     }
 
     @Override
-    public String getMeasurementUnit(String measurementUnit) {
+    public String getMeasurementUnit() {
         this.measurementUnit =measurementUnit;
         return this.measurementUnit;
     }
 
-    @Override
-    public String getItemName(String itemName) {
-        this.itemName =itemName;
-        return this.itemName;
-    }
 }
