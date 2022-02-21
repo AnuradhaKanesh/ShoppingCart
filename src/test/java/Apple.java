@@ -6,7 +6,15 @@ public class Apple implements Items {
 
     private Double price;
     private int quantity;
-    private String measurementUnit,itemName="Apple";
+    private String measurementUnit;
+    private String itemName="Apple";
+
+    @Override
+    public String getItemName() {
+        return itemName;
+    }
+
+
 
     @Override
     public Double getPrice() {

@@ -6,7 +6,14 @@ public class Milk implements Items {
 
     Double price;
     int quantity;
-    String measurementUnit,itemName;
+    String measurementUnit;
+
+    @Override
+    public String getItemName() {
+        return itemName;
+    }
+
+    String itemName="Milk";
 
     @Override
     public Double getPrice() {

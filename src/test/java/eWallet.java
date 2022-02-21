@@ -7,12 +7,15 @@ import org.testng.Assert;
 @Builder
 public class eWallet {
     @Setter
-    private double walletBalance = 0.0;
+    private double walletBalance, amountPaid;
 
-
-    public void payWithWalletAmount(double amountToPay) {
-        Assert.assertTrue(walletBalance < amountToPay,"Not enough balance");
-        this.walletBalance -= amountToPay;
+    public double discountOver100Rs(double amountToPay) {
+        if (amountToPay >= 100.0) {
+            double discount = amountToPay * .05;
+            amountToPay -= discount;
+        }
+        return amountToPay;
     }
+
 
 }

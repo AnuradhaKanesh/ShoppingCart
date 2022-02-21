@@ -6,23 +6,25 @@ public class Newspaper implements Items {
 
     Double price;
     int quantity;
-    String measurementUnit,itemName;
+    String measurementUnit;
+    @Getter
+    String itemName = "Newspaper";
 
     @Override
     public Double getPrice() {
-        this.price =price;
+        this.price = price;
         return this.price;
     }
 
     @Override
     public int getQuantity() {
-        this.quantity =quantity;
+        this.quantity = quantity;
         return this.quantity;
     }
 
     @Override
     public String getMeasurementUnit() {
-        this.measurementUnit =measurementUnit;
+        this.measurementUnit = measurementUnit;
         return this.measurementUnit;
     }
 

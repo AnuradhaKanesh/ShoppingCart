@@ -5,5 +5,5 @@ public interface Items {
     Double getPrice();
     int getQuantity();
     String getMeasurementUnit();
-    //Double getTotalPriceOfItemPurchased(int quantity);
+    String getItemName();
 }
