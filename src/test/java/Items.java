@@ -1,9 +1,15 @@
-import java.security.SecureRandom;
+import lombok.Builder;
+import lombok.Getter;
 
-public interface Items {
+@Getter
+@Builder
+public class Items {
 
-    Double getPrice();
-    int getQuantity();
-    String getMeasurementUnit();
-    String getItemName();
+
+    private AvailableItem.Item itemName;
+    private Double price;
+    private int quantity;
+    private String measurementUnit;
+    private int availableQuantity;
+
 }

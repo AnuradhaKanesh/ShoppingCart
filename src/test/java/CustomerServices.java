@@ -7,9 +7,8 @@ public class CustomerServices {
     {
         this.customer= customer;
     }
+
     public void payWithWalletAmount(double amountToPay) {
-        Assert.assertTrue(customer.getWallet().getWalletBalance() > amountToPay, "Not enough balance");
-        amountToPay = customer.getWallet().discountOver100Rs(amountToPay);
         double walletBalance = customer.getWallet().getWalletBalance();
         walletBalance -=amountToPay;
         customer.getWallet().setWalletBalance(walletBalance);
@@ -17,4 +16,9 @@ public class CustomerServices {
     }
 
 
+    public void payWithWalletAmount(double amountToPay, String discount, String priceOver) {
+
+
+
+    }
 }

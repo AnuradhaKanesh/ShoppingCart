@@ -1,7 +1,6 @@
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import org.testng.Assert;
 
 @Getter
 @Builder
@@ -9,10 +8,10 @@ public class eWallet {
     @Setter
     private double walletBalance, amountPaid;
 
-    public double discountOver100Rs(double amountToPay) {
-        if (amountToPay >= 100.0) {
-            double discount = amountToPay * .05;
-            amountToPay -= discount;
+    public double getDiscount(double amountToPay,String discount,String price) {
+        if (amountToPay >= Double.valueOf(price)) {
+            double dis = amountToPay * (Double.valueOf(discount)/100.0);
+            amountToPay -= dis;
         }
         return amountToPay;
     }
