@@ -1,3 +1,5 @@
+package Shopping;
+
 import lombok.Builder;
 import lombok.Getter;
 

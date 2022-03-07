@@ -1,8 +1,10 @@
-import org.testng.Assert;
+package Service;
+
+import Shopping.Customer;
 
 public class CustomerServices {
 
-    Customer customer;
+    public Customer customer;
     public CustomerServices(Customer customer)
     {
         this.customer= customer;
@@ -15,10 +17,4 @@ public class CustomerServices {
         customer.getWallet().setAmountPaid(amountToPay);
     }
 
-
-    public void payWithWalletAmount(double amountToPay, String discount, String priceOver) {
-
-
-
-    }
 }

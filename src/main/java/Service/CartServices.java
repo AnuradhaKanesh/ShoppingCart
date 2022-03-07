@@ -1,3 +1,9 @@
+package Service;
+
+import Shopping.Customer;
+import Shopping.Items;
+import Shopping.ShoppingCart;
+
 import java.util.Arrays;
 import java.util.List;
 

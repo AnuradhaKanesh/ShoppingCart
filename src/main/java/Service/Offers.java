@@ -1,3 +1,10 @@
+package Service;
+
+import Service.CartServices;
+import Shopping.AvailableItem;
+import Shopping.Items;
+import Shopping.ShoppingCart;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
